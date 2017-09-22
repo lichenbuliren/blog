@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Heaven 的博客</title>
+  
+  
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="http://heavenru.com/blog/"/>
+  <updated>2017-09-21T14:23:23.000Z</updated>
+  <id>http://heavenru.com/blog/</id>
+  
+  <author>
+    <name>Heaven</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue2.0 项目总结</title>
+    <link href="http://heavenru.com/blog/2017/09/21/vue2-0-%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://heavenru.com/blog/2017/09/21/vue2-0-项目总结/</id>
+    <published>2017-09-21T03:37:37.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      关于 vue2.0 单页应用的小结
+    
+    </summary>
+    
+      <category term="技术类" scheme="http://heavenru.com/blog/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"/>
+    
+    
+      <category term="总结" scheme="http://heavenru.com/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="vue" scheme="http://heavenru.com/blog/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 CANVAS 实现帧动画</title>
+    <link href="http://heavenru.com/blog/2017/07/31/%E4%BD%BF%E7%94%A8CANVAS%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%8A%A8%E7%94%BB/"/>
+    <id>http://heavenru.com/blog/2017/07/31/使用CANVAS实现视频动画/</id>
+    <published>2017-07-31T11:38:52.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在最近项目中需要实现一个精灵动画，素材方只提供了一个短视频素材，所以在实现精灵动画之前先介绍两个工具来帮助我们更好的实现需求。在这篇文章中，主要是介绍两个命令行工具来实现将一个短视频文件转化成一张 sprite 图片与如何使用 canvas 绘制精灵动画&lt;br&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
+    
+    
+      <category term="原生 JS" scheme="http://heavenru.com/blog/tags/%E5%8E%9F%E7%94%9F-JS/"/>
+    
+      <category term="CANVAS" scheme="http://heavenru.com/blog/tags/CANVAS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义angular2输入组件</title>
+    <link href="http://heavenru.com/blog/2016/11/24/%E8%87%AA%E5%AE%9A%E4%B9%89angular2%E8%BE%93%E5%85%A5%E7%BB%84%E4%BB%B6/"/>
+    <id>http://heavenru.com/blog/2016/11/24/自定义angular2输入组件/</id>
+    <published>2016-11-24T11:17:44.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;构建一个自定义-angular2-输入组件&quot;&gt;&lt;a href=&quot;#构建一个自定义-angular2-输入组件&quot; class=&quot;headerlink&quot; title=&quot;构建一个自定义 angular2 输入组件&quot;&gt;&lt;/a&gt;构建一个自定义 angular2 输入组件&lt;/h1&gt;&lt;p&gt;今天我们来学习如何正确的构建和一个具有和 &lt;code&gt;&amp;lt;input type=&amp;quot;text&amp;quot;&amp;gt;&lt;/code&gt; 同样作用，但同时也具有自己的逻辑的输入组件。
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
+    
+      <category term="angular2.js" scheme="http://heavenru.com/blog/categories/JavaScript/angular2-js/"/>
+    
+    
+      <category term="angular2" scheme="http://heavenru.com/blog/tags/angular2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Vue.js构建单页应用</title>
+    <link href="http://heavenru.com/blog/2016/07/03/%E4%BD%BF%E7%94%A8Vue-js%E6%9E%84%E5%BB%BA%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8/"/>
+    <id>http://heavenru.com/blog/2016/07/03/使用Vue-js构建单页应用/</id>
+    <published>2016-07-03T12:56:24.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前言：在最近学习 Vue.js 的时候，看到国外一篇讲述了如何使用 Vue.js 和 Vuex 来构建一个简单笔记的单页应用的文章。感觉收获挺多，自己在它的例子的基础上进行了一些优化和自定义功能，在这里和大家分享下学习心得。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
+    
+      <category term="Vue.js" scheme="http://heavenru.com/blog/categories/JavaScript/Vue-js/"/>
+    
+    
+      <category term="vue" scheme="http://heavenru.com/blog/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件异步上传-下篇</title>
+    <link href="http://heavenru.com/blog/2016/05/17/%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E4%B8%8A%E4%BC%A0-%E4%B8%8B%E7%AF%87/"/>
+    <id>http://heavenru.com/blog/2016/05/17/文件异步上传-下篇/</id>
+    <published>2016-05-17T06:43:07.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h3&gt;&lt;p&gt;上一篇主要讲了文件异步上传的前端相关的东西，在这篇文章里面，我们主要讲解写使用&lt;code&gt;koa&lt;/code&gt;框架来搭建一个简单的处理文件上传的&lt;code&gt;node&lt;/code&gt;后台项目。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
+    
+      <category term="nodejs" scheme="http://heavenru.com/blog/categories/JavaScript/nodejs/"/>
+    
+    
+      <category term="HTML5" scheme="http://heavenru.com/blog/tags/HTML5/"/>
+    
+      <category term="File Upload" scheme="http://heavenru.com/blog/tags/File-Upload/"/>
+    
+      <category term="ajax" scheme="http://heavenru.com/blog/tags/ajax/"/>
+    
+      <category term="nodejs" scheme="http://heavenru.com/blog/tags/nodejs/"/>
+    
+      <category term="koa" scheme="http://heavenru.com/blog/tags/koa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件异步上传-上篇</title>
+    <link href="http://heavenru.com/blog/2016/05/12/%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E4%B8%8A%E4%BC%A0-%E4%B8%8A%E7%AF%87/"/>
+    <id>http://heavenru.com/blog/2016/05/12/文件异步上传-上篇/</id>
+    <published>2016-05-12T08:43:36.000Z</published>
+    <updated>2017-08-01T11:29:52.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;项目背景&quot;&gt;&lt;a href=&quot;#项目背景&quot; class=&quot;headerlink&quot; title=&quot;项目背景&quot;&gt;&lt;/a&gt;项目背景&lt;/h3&gt;&lt;p&gt;在这篇文章的里面和大家分享下 HTML5 的文件上传操作，后台是我用 &lt;code&gt;nodejs&lt;/code&gt; 的&lt;code&gt;koa&lt;/code&gt;框架搭建的一个Demo，所在在这篇文章里面，我也会顺带讲讲如何用&lt;code&gt;koa&lt;/code&gt;搭建一个简单的node后台。&lt;/p&gt;
+&lt;h3 id=&quot;技术要点&quot;&gt;&lt;a href=&quot;#技术要点&quot; class=&quot;headerlink&quot; title=&quot;技术要点&quot;&gt;&lt;/a&gt;技术要点&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FileReader&lt;/a&gt; 用来实现图片预览、&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/API/FormData&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FormData&lt;/a&gt; 用来实现文件异步上传操作&lt;/li&gt;
+&lt;li&gt;koa 框架的简单使用&lt;/li&gt;
+&lt;li&gt;利用 FormData 实现文件异步上传操作&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
+    
+      <category term="nodejs" scheme="http://heavenru.com/blog/categories/JavaScript/nodejs/"/>
+    
+    
+      <category term="HTML5" scheme="http://heavenru.com/blog/tags/HTML5/"/>
+    
+      <category term="File Upload" scheme="http://heavenru.com/blog/tags/File-Upload/"/>
+    
+      <category term="ajax" scheme="http://heavenru.com/blog/tags/ajax/"/>
+    
+      <category term="nodejs" scheme="http://heavenru.com/blog/tags/nodejs/"/>
+    
+      <category term="koa" scheme="http://heavenru.com/blog/tags/koa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React 入门实践小结</title>
+    <link href="http://heavenru.com/blog/2015/12/04/React-%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5%E5%B0%8F%E7%BB%93/"/>
+    <id>http://heavenru.com/blog/2015/12/04/React-入门实践小结/</id>
+    <published>2015-12-04T11:59:16.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;React-入门练习实践总结&quot;&gt;&lt;a href=&quot;#React-入门练习实践总结&quot; class=&quot;headerlink&quot; title=&quot;React 入门练习实践总结&quot;&gt;&lt;/a&gt;React 入门练习实践总结&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="React" scheme="http://heavenru.com/blog/categories/React/"/>
+    
+    
+      <category term="javascript" scheme="http://heavenru.com/blog/tags/javascript/"/>
+    
+      <category term="react" scheme="http://heavenru.com/blog/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shadowsocks 本地配置</title>
+    <link href="http://heavenru.com/blog/2015/12/01/Shadowsocks-%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE/"/>
+    <id>http://heavenru.com/blog/2015/12/01/Shadowsocks-本地配置/</id>
+    <published>2015-12-01T11:37:34.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接上一篇「挣脱牢笼之搭建 VPN」，我们已经购买了虚拟服务器，并且在上面开启了 「Shadowsocks」服务。&lt;/p&gt;
+&lt;h3 id=&quot;本地「Shadowsocks」配置&quot;&gt;&lt;a href=&quot;#本地「Shadowsocks」配置&quot; class=&quot;headerlink&quot; title=&quot;本地「Shadowsocks」配置&quot;&gt;&lt;/a&gt;本地「Shadowsocks」配置&lt;/h3&gt;&lt;p&gt;打开我们已经安装的 「Shadowsocks」软件，点击小飞机图标，选择 &lt;code&gt;Servers-&amp;gt;Open Server Preferences&lt;/code&gt;，出现如下界面；&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/preferences.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Address: 我们的虚拟服务器（VPS）地址 + 端口&lt;/li&gt;
+&lt;li&gt;Encryption: 服务器中开启的加密方式&lt;/li&gt;
+&lt;li&gt;Password: 密码&lt;/li&gt;
+&lt;li&gt;Remarks: 描述，取个别名&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://heavenru.com/blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="VPS" scheme="http://heavenru.com/blog/tags/VPS/"/>
+    
+      <category term="VPN" scheme="http://heavenru.com/blog/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>挣脱牢笼之搭建 VPN</title>
+    <link href="http://heavenru.com/blog/2015/11/27/%E6%8C%A3%E8%84%B1%E7%89%A2%E7%AC%BC%E4%B9%8B%E6%90%AD%E5%BB%BA%E8%BF%9C%E7%A8%8B%20VPN/"/>
+    <id>http://heavenru.com/blog/2015/11/27/挣脱牢笼之搭建远程 VPN/</id>
+    <published>2015-11-27T11:54:17.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/blog/images/title-bg.png&quot; width=&quot;100%&quot;&gt;&lt;/p&gt;
+&lt;p&gt;为何会想到要翻个墙(为了被河蟹)，作为一个非著名、专业程序员，时常需要查找一下技术方面的资料；一般情况下可能会想到使用「百度」这个坑爹的搜索引擎去查资料。但是结果你会发现找的一堆的什么鬼东西，跟自己搜索的没有半毛钱关系。大多数是带有广告性质的博客或者纯粹的广告商排在最前面，恶心至极。
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://heavenru.com/blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="VPS" scheme="http://heavenru.com/blog/tags/VPS/"/>
+    
+      <category term="VPN" scheme="http://heavenru.com/blog/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CreateJS 学习笔记——初识 CreateJS</title>
+    <link href="http://heavenru.com/blog/2015/11/25/CreateJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/"/>
+    <id>http://heavenru.com/blog/2015/11/25/CreateJS学习笔记01/</id>
+    <published>2015-11-25T11:33:37.000Z</published>
+    <updated>2017-08-01T11:29:52.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1、什么是-CreateJS&quot;&gt;&lt;a href=&quot;#1、什么是-CreateJS&quot; class=&quot;headerlink&quot; title=&quot;1、什么是 CreateJS ?&quot;&gt;&lt;/a&gt;1、什么是 CreateJS ?&lt;/h2&gt;&lt;p&gt;CreateJS 是一套可以构建丰富交互体验的 HTML5 游戏的开源工具包，旨在降低 HTML5 项目的开发难度和成本，让开发者以熟悉的方式打造更具现代感的网络交互体验。&lt;/p&gt;
+&lt;p&gt;官方地址：&lt;a href=&quot;www.createjs.com&quot;&gt;www.createjs.com&lt;/a&gt;;&lt;br&gt;Github: &lt;a href=&quot;https://github.com/CreateJS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/CreateJS&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CreateJS" scheme="http://heavenru.com/blog/categories/CreateJS/"/>
+    
+    
+      <category term="html5 game engine" scheme="http://heavenru.com/blog/tags/html5-game-engine/"/>
+    
+      <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
+    
+      <category term="js" scheme="http://heavenru.com/blog/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Three.js 学习笔记01——介绍和使用 Three.js</title>
+    <link href="http://heavenru.com/blog/2015/11/19/Threejs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://heavenru.com/blog/2015/11/19/Threejs学习笔记/</id>
+    <published>2015-11-19T09:26:26.000Z</published>
+    <updated>2017-08-01T11:29:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;WebGL-登场&quot;&gt;&lt;a href=&quot;#WebGL-登场&quot; class=&quot;headerlink&quot; title=&quot;WebGL 登场&quot;&gt;&lt;/a&gt;WebGL 登场&lt;/h2&gt;&lt;p&gt;如今浏览器的功能越来越强大，而且这些功能可以通过 Javascript 直接调用。你可以用
+        
+      
+    
+    </summary>
+    
+      <category term="ThreeJS" scheme="http://heavenru.com/blog/categories/ThreeJS/"/>
+    
+    
+      <category term="javascript" scheme="http://heavenru.com/blog/tags/javascript/"/>
+    
+      <category term="webgl" scheme="http://heavenru.com/blog/tags/webgl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对字体文件开启GZIP压缩</title>
+    <link href="http://heavenru.com/blog/2015/11/18/web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%BC%80%E5%90%AF%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6gzip%E5%8E%8B%E7%BC%A9/"/>
+    <id>http://heavenru.com/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/</id>
+    <published>2015-11-18T03:21:35.000Z</published>
+    <updated>2017-09-21T14:23:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;字体类别&quot;&gt;&lt;a href=&quot;#字体类别&quot; class=&quot;headerlink&quot; title=&quot;字体类别&quot;&gt;&lt;/a&gt;字体类别&lt;/h2&gt;&lt;h3 id=&quot;TrueType-ttf&quot;&gt;&lt;a href=&quot;#TrueType-ttf&quot; class=&quot;headerlink&quot; title=&quot;TrueType (.ttf)&quot;&gt;&lt;/a&gt;TrueType (.ttf)&lt;/h3&gt;&lt;p&gt;　　&lt;code&gt;Windows&lt;/code&gt; 和 &lt;code&gt;Mac&lt;/code&gt; 系统最常用的字体格式，其最大的特点就是它是由一种数学模式来进行定义的基于轮廓技术的字体，这使得它们比基于矢量的字体更容易处理，保证了屏幕与打印输出的一致性。同时，这类字体和矢量字体一样可以随意缩放、旋转而不必担心会出现锯齿。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="font" scheme="http://heavenru.com/blog/categories/font/"/>
+    
+    
+      <category term="移动端" scheme="http://heavenru.com/blog/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+      <category term="性能优化" scheme="http://heavenru.com/blog/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="font" scheme="http://heavenru.com/blog/tags/font/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端样式常用技巧分享</title>
+    <link href="http://heavenru.com/blog/2015/11/18/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%BC%98%E5%8C%96/"/>
+    <id>http://heavenru.com/blog/2015/11/18/移动端优化/</id>
+    <published>2015-11-18T03:21:35.000Z</published>
+    <updated>2017-08-01T11:29:52.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、居中显示&quot;&gt;&lt;a href=&quot;#1、居中显示&quot; class=&quot;headerlink&quot; title=&quot;1、居中显示&quot;&gt;&lt;/a&gt;1、居中显示&lt;/h3&gt;&lt;p&gt;主要使用 css3 &lt;code&gt;translate&lt;/code&gt; 属性，如 &lt;code&gt;translate3d(-50%,-50%,0)&lt;/code&gt; 这里的百分比相对元素自身宽高来计算的，所以在不清楚自身DOM宽高的情况下，可以很方便的居中布局&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;    &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+        这是容器
+        &amp;lt;div class=&amp;quot;demo&amp;quot;&amp;gt;
+            居中显示
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;    .container{
+        width: 80%;
+        height:80%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px solid red;
+        transform: translate3d(-50%, -50%, 0);
+        box-sizing: border-box;
+    }
+
+    .container .demo{
+        position: absolute;
+        border: 1px solid #ddd;
+        width: 40%;
+        height: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;另一种居中方案：&lt;a href=&quot;http://jsbin.com/medeserawe/edit?html,output&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jsbin.com/medeserawe/edit?html,output&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="http://heavenru.com/blog/categories/css/"/>
+    
+    
+      <category term="移动端" scheme="http://heavenru.com/blog/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+      <category term="性能优化" scheme="http://heavenru.com/blog/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="css" scheme="http://heavenru.com/blog/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原生JS Tab组件</title>
+    <link href="http://heavenru.com/blog/2015/09/15/%E5%8E%9F%E7%94%9FJS-Tab%E7%BB%84%E4%BB%B6/"/>
+    <id>http://heavenru.com/blog/2015/09/15/原生JS-Tab组件/</id>
+    <published>2015-09-15T11:31:51.000Z</published>
+    <updated>2017-08-01T11:29:52.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;上面看到一个有意思的项目，名字叫做&lt;a href=&quot;https://github.com/nimojs/learn-js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;learnjs&lt;/a&gt;，这里会提供一些基础的JS任务，由浅入深的完成一个个项目不同阶段，从而提高个人的编码水平。&lt;/p&gt;
+&lt;p&gt;好了，回到正题，在这里分享下个人编写的Tab组件这个项目的代码，由于没有使用第三方JS库&lt;br&gt;所以下面的代码中没有去考虑低版本浏览器的兼容性问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
+    
+    
+      <category term="原生JS" scheme="http://heavenru.com/blog/tags/%E5%8E%9F%E7%94%9FJS/"/>
+    
+      <category term="Widget" scheme="http://heavenru.com/blog/tags/Widget/"/>
+    
+      <category term="封装" scheme="http://heavenru.com/blog/tags/%E5%B0%81%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>放弃jQuery,使用原生JS API</title>
+    <link href="http://heavenru.com/blog/2015/09/02/%E6%94%BE%E5%BC%83jQuery,%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9FJS%20API/"/>
+    <id>http://heavenru.com/blog/2015/09/02/放弃jQuery,使用原生JS API/</id>
+    <published>2015-09-02T10:31:25.000Z</published>
+    <updated>2017-08-01T11:29:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、监听文档加载事件&quot;&gt;&lt;a href=&quot;#1、监听文档加载事件&quot; class=&quot;headerlink&quot; title=&quot;1、监听文档加载事件&quot;&gt;&lt;/a&gt;1、监听文档加载事件&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;   
+        
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
+    
+    
+      <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
+    
+      <category term="js" scheme="http://heavenru.com/blog/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Hexo搭建GitHub个人博客</title>
+    <link href="http://heavenru.com/blog/2015/09/02/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BAGitHub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://heavenru.com/blog/2015/09/02/使用Hexo搭建GitHub个人博客/</id>
+    <published>2015-09-02T10:31:25.000Z</published>
+    <updated>2017-08-01T11:29:52.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近突然想起来要捣鼓一个自己的个人博客网站，在网上查了下各种资料，最后决定使用Hexo来搭建了。在捣鼓的过程中也发现有很多坑，在这里总结下个人的搭建经历。&lt;/p&gt;
+&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#intro&quot;&gt;Hexo简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#install&quot;&gt;Hexo安装方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#config&quot;&gt;Hexo配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#write&quot;&gt;写文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#deploy&quot;&gt;Hexo部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#plugins&quot;&gt;Hexo常用插件&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;1-Hexo简介&quot;&gt;&lt;a href=&quot;#1-Hexo简介&quot; class=&quot;headerlink&quot; title=&quot;1. Hexo简介&quot;&gt;&lt;/a&gt;&lt;a name=&quot;intro&quot;&gt;1. Hexo简介&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Hexo 是一个轻量的静态博客框架。通过Hexo可以快速生成一个静态博客框架,仅需要几条命令就可以完成,相当方便。&lt;/p&gt;
+&lt;p&gt;而架设Hexo的环境更简单了 不需要lnmp/lamp这些繁琐复杂的环境 仅仅需要一个简单的http服务器即可使用 或者使用互联网上免费的页面托管服务&lt;br&gt;比如Hexo的官方网站&lt;a href=&quot;http://hexo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://hexo.io&lt;/a&gt; 就是托管于github的pages服务上&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="http://heavenru.com/blog/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
+    
+      <category term="demo" scheme="http://heavenru.com/blog/tags/demo/"/>
+    
+  </entry>
+  
+</feed>
