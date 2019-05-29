@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://heavenru.com/blog/"/>
-  <updated>2019-05-18T08:38:03.700Z</updated>
+  <updated>2019-05-29T02:25:19.491Z</updated>
   <id>http://heavenru.com/blog/</id>
   
   <author>
@@ -17,21 +17,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>小程序插件开发小结</title>
+    <link href="http://heavenru.com/blog/2019/05/29/miniprogram-plugin/"/>
+    <id>http://heavenru.com/blog/2019/05/29/miniprogram-plugin/</id>
+    <published>2019-05-29T02:14:05.000Z</published>
+    <updated>2019-05-29T02:25:19.491Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;小程序插件开发小结&quot;&gt;&lt;a href=&quot;#小程序插件开发小结&quot; class=&quot;headerlink&quot; title=&quot;小程序插件开发小结&quot;&gt;&lt;/a&gt;小程序插件开发小结&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;本文主要是整理了与总结了一些小程序插件开发相关资料，按顺序阅读按文章即可对小程序插件开发有个基本了解了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; class=&quot;headerlink&quot; title=&quot;基础概念&quot;&gt;&lt;/a&gt;基础概念&lt;/h3&gt;&lt;h4 id=&quot;什么是小程序插件&quot;&gt;&lt;a href=&quot;#什么是小程序插件&quot; class=&quot;headerlink&quot; title=&quot;什么是小程序插件&quot;&gt;&lt;/a&gt;什么是小程序插件&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;插件是对一组&lt;code&gt;js 接口&lt;/code&gt;、&lt;code&gt;自定义组件&lt;/code&gt;或&lt;code&gt;页面&lt;/code&gt;的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; 插件的开发和使用自小程序基础库版本 &lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1.9.6&lt;/a&gt; 开始支持。（如果插件包含页面，则需要基础库版本 &lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;2.1.0&lt;/a&gt; 。）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: red;&quot;&gt;小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;传送门：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小程序插件功能介绍&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="wechat" scheme="http://heavenru.com/blog/categories/wechat/"/>
+    
+    
+      <category term="javascript" scheme="http://heavenru.com/blog/tags/javascript/"/>
+    
+      <category term="miniprogram" scheme="http://heavenru.com/blog/tags/miniprogram/"/>
+    
+  </entry>
+  
+  <entry>
     <title>React Hook 不完全指南</title>
     <link href="http://heavenru.com/blog/2019/05/18/react-hook/"/>
     <id>http://heavenru.com/blog/2019/05/18/react-hook/</id>
     <published>2019-05-18T08:31:27.000Z</published>
-    <updated>2019-05-18T08:38:03.700Z</updated>
+    <updated>2019-05-29T02:25:27.084Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;React-Hook-不完全指南&quot;&gt;&lt;a href=&quot;#React-Hook-不完全指南&quot; class=&quot;headerlink&quot; title=&quot;React Hook 不完全指南&quot;&gt;&lt;/a&gt;React Hook 不完全指南&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a
-        
-      
+      &lt;h1 id=&quot;React-Hook-不完全指南&quot;&gt;&lt;a href=&quot;#React-Hook-不完全指南&quot; class=&quot;headerlink&quot; title=&quot;React Hook 不完全指南&quot;&gt;&lt;/a&gt;React Hook 不完全指南&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;本文内容大部分参考了 &lt;a href=&quot;https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;overreacted.io&lt;/a&gt; 博客一文，同时结合 &lt;a href=&quot;https://zh-hans.reactjs.org/docs/hooks-intro.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Hook 官方&lt;/a&gt; 文章，整理并归纳一些笔记和输出个人的一些理解&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -49,7 +75,7 @@
     <link href="http://heavenru.com/blog/2017/09/22/CSS-GPU-Animation-Doing-It-Right/"/>
     <id>http://heavenru.com/blog/2017/09/22/CSS-GPU-Animation-Doing-It-Right/</id>
     <published>2017-09-22T03:36:43.000Z</published>
-    <updated>2018-01-25T02:35:03.642Z</updated>
+    <updated>2019-05-29T02:31:12.976Z</updated>
     
     <summary type="html">
     
@@ -65,7 +91,7 @@
     <link href="http://heavenru.com/blog/2017/09/21/vue2-0-%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     <id>http://heavenru.com/blog/2017/09/21/vue2-0-项目总结/</id>
     <published>2017-09-21T03:37:37.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2019-05-29T02:31:59.718Z</updated>
     
     <summary type="html">
     

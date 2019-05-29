@@ -37,7 +37,7 @@
     
     <title>
         
-            标签: css | 
+            标签: miniprogram | 
         
         Heaven 的博客
     </title>
@@ -246,7 +246,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://heavenru.com/blog">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: css | Heaven 的博客">
+    <meta property="og:title" content="标签: miniprogram | Heaven 的博客">
     <meta property="og:image" content="http://heavenru.com/blogfavicon.png" />
     <meta property="og:description" content="一个前端切图仔的个人博客">
     
@@ -254,7 +254,7 @@
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="标签: css | Heaven 的博客">
+    <meta name="twitter:title" content="标签: miniprogram | Heaven 的博客">
     <meta name="twitter:description" content="一个前端切图仔的个人博客">
     <meta name="twitter:image" content="http://heavenru.com/blogfavicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -262,7 +262,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://heavenru.com/blog/blog/tags/css/index.html" />
+        <link rel="canonical" href="http://heavenru.com/blog/blog/tags/miniprogram/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -325,46 +325,25 @@
     
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2015/11/18/移动端优化/">移动端样式常用技巧分享</a></p>
+        <p class="article-headline-p"><a href="/blog/2019/05/29/miniprogram-plugin/">小程序插件开发小结</a></p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            1、居中显示主要使用 css3 translate 属性，如 translate3d(-50%,-50%,0) 这里的百分比相对元素自身宽高来计算的，所以在不清楚自身DOM宽高的情况下，可以很方便的居中布局
-    &lt;div class=&quot;container&quot;&gt;
-        这是容器
-        &lt;div class=&quot;demo&quot;&gt;
-            居中显示
-        &lt;/div&gt;
-    &lt;/div&gt;
+            小程序插件开发小结
+本文主要是整理了与总结了一些小程序插件开发相关资料，按顺序阅读按文章即可对小程序插件开发有个基本了解了
 
-    .container{
-        width: 80%;
-        height:80%;
-        position:absolute;
-        top: 50%;
-        left: 50%;
-        border: 1px solid red;
-        transform: translate3d(-50%, -50%, 0);
-        box-sizing: border-box;
-    }
+基础概念什么是小程序插件
+插件是对一组js 接口、自定义组件或页面的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。
 
-    .container .demo{
-        position: absolute;
-        border: 1px solid #ddd;
-        width: 40%;
-        height: 40%;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%,-50%,0);
-    }
-
-另一种居中方案：http://jsbin.com/medeserawe/edit?html,output
+ 插件的开发和使用自小程序基础库版本 1.9.6 开始支持。（如果插件包含页面，则需要基础库版本 2.1.0 。）
+小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的
+传送门：小程序插件功能介绍
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/blog/2015/11/18/移动端优化/" target="_self">阅读全文</a>
+            <a href="/blog/2019/05/29/miniprogram-plugin/" target="_self">阅读全文</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -376,14 +355,14 @@
             </div>
             <div>
                 <strong>Heaven</strong>
-                <span>11月 18, 2015</span>
+                <span>5月 29, 2019</span>
             </div>
         </div>
         <div id="post_entry-right-info">
           
               <!-- Category -->
               <span class="post_entry-category">
-                  <a class="post_category-link" href="/blog/categories/css/">css</a>
+                  <a class="post_category-link" href="/blog/categories/wechat/">wechat</a>
               </span>
             
 

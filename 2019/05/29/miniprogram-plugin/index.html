@@ -37,7 +37,7 @@
     
     <title>
         
-            对字体文件开启GZIP压缩 | 
+            小程序插件开发小结 | 
         
         Heaven 的博客
     </title>
@@ -48,8 +48,16 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Heaven">
-    <meta name="description" itemprop="description" content="字体类别TrueType (.ttf)　　Windows 和 Mac 系统最常用的字体格式，其最大的特点就是它是由一种数学模式来进行定义的基于轮廓技术的字体，这使得它们比基于矢量的字体更容易处理，保证了屏幕与打印输出的一致性。同时，这类字体和矢量字体一样可以随意缩放、旋转而不必担心会出现锯齿。">
-    <meta name="keywords" content="前端博客、heavenru.com、切图仔、HTML、CSS、JavaScript、canvas,移动端,性能优化,font">
+    <meta name="description" itemprop="description" content="小程序插件开发小结
+本文主要是整理了与总结了一些小程序插件开发相关资料，按顺序阅读按文章即可对小程序插件开发有个基本了解了
+
+基础概念什么是小程序插件
+插件是对一组js 接口、自定义组件或页面的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。
+
+ 插件的开发和使用自小程序基础库版本 1.9.6 开始支持。（如果插件包含页面，则需要基础库版本 2.1.0 。）
+小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的
+传送门：小程序插件功能介绍">
+    <meta name="keywords" content="前端博客、heavenru.com、切图仔、HTML、CSS、JavaScript、canvas,javascript,miniprogram">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -249,26 +257,42 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://heavenru.com/blog">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="对字体文件开启GZIP压缩 | Heaven 的博客">
+    <meta property="og:title" content="小程序插件开发小结 | Heaven 的博客">
     <meta property="og:image" content="http://heavenru.com/blogfavicon.png" />
-    <meta property="og:description" content="字体类别TrueType (.ttf)　　Windows 和 Mac 系统最常用的字体格式，其最大的特点就是它是由一种数学模式来进行定义的基于轮廓技术的字体，这使得它们比基于矢量的字体更容易处理，保证了屏幕与打印输出的一致性。同时，这类字体和矢量字体一样可以随意缩放、旋转而不必担心会出现锯齿。">
-    <meta property="og:article:tag" content="移动端"> <meta property="og:article:tag" content="性能优化"> <meta property="og:article:tag" content="font"> 
+    <meta property="og:description" content="小程序插件开发小结
+本文主要是整理了与总结了一些小程序插件开发相关资料，按顺序阅读按文章即可对小程序插件开发有个基本了解了
+
+基础概念什么是小程序插件
+插件是对一组js 接口、自定义组件或页面的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。
+
+ 插件的开发和使用自小程序基础库版本 1.9.6 开始支持。（如果插件包含页面，则需要基础库版本 2.1.0 。）
+小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的
+传送门：小程序插件功能介绍">
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="miniprogram"> 
 
     
-        <meta property="article:published_time" content="Wed Nov 18 2015 11:21:35 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Sep 21 2017 22:23:23 GMT+0800" />
+        <meta property="article:published_time" content="Wed May 29 2019 10:14:05 GMT+0800" />
+        <meta property="article:modified_time" content="Wed May 29 2019 10:25:19 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="对字体文件开启GZIP压缩 | Heaven 的博客">
-    <meta name="twitter:description" content="字体类别TrueType (.ttf)　　Windows 和 Mac 系统最常用的字体格式，其最大的特点就是它是由一种数学模式来进行定义的基于轮廓技术的字体，这使得它们比基于矢量的字体更容易处理，保证了屏幕与打印输出的一致性。同时，这类字体和矢量字体一样可以随意缩放、旋转而不必担心会出现锯齿。">
+    <meta name="twitter:title" content="小程序插件开发小结 | Heaven 的博客">
+    <meta name="twitter:description" content="小程序插件开发小结
+本文主要是整理了与总结了一些小程序插件开发相关资料，按顺序阅读按文章即可对小程序插件开发有个基本了解了
+
+基础概念什么是小程序插件
+插件是对一组js 接口、自定义组件或页面的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。
+
+ 插件的开发和使用自小程序基础库版本 1.9.6 开始支持。（如果插件包含页面，则需要基础库版本 2.1.0 。）
+小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的
+传送门：小程序插件功能介绍">
     <meta name="twitter:image" content="http://heavenru.com/blogfavicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://heavenru.com/blog" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://heavenru.com/blog/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/index.html" />
+        <link rel="canonical" href="http://heavenru.com/blog/blog/2019/05/29/miniprogram-plugin/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -280,10 +304,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://heavenru.com/blog/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/index.html",
-    "headline": "对字体文件开启GZIP压缩",
-    "datePublished": "Wed Nov 18 2015 11:21:35 GMT+0800",
-    "dateModified": "Thu Sep 21 2017 22:23:23 GMT+0800",
+    "mainEntityOfPage": "http://heavenru.com/blog/blog/2019/05/29/miniprogram-plugin/index.html",
+    "headline": "小程序插件开发小结",
+    "datePublished": "Wed May 29 2019 10:14:05 GMT+0800",
+    "dateModified": "Wed May 29 2019 10:25:19 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Heaven",
@@ -301,8 +325,16 @@
             "url": "favicon.png"
         }
     },
-    "keywords": ",移动端,性能优化,font前端博客、heavenru.com、切图仔、HTML、CSS、JavaScript、canvas",
-    "description": "字体类别TrueType (.ttf)　　Windows 和 Mac 系统最常用的字体格式，其最大的特点就是它是由一种数学模式来进行定义的基于轮廓技术的字体，这使得它们比基于矢量的字体更容易处理，保证了屏幕与打印输出的一致性。同时，这类字体和矢量字体一样可以随意缩放、旋转而不必担心会出现锯齿。",
+    "keywords": ",javascript,miniprogram前端博客、heavenru.com、切图仔、HTML、CSS、JavaScript、canvas",
+    "description": "小程序插件开发小结
+本文主要是整理了与总结了一些小程序插件开发相关资料，按顺序阅读按文章即可对小程序插件开发有个基本了解了
+
+基础概念什么是小程序插件
+插件是对一组js 接口、自定义组件或页面的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。
+
+ 插件的开发和使用自小程序基础库版本 1.9.6 开始支持。（如果插件包含页面，则需要基础库版本 2.1.0 。）
+小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的
+传送门：小程序插件功能介绍",
 }
 </script>
 
@@ -367,7 +399,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字体类别"><span class="post-toc-text">字体类别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TrueType-ttf"><span class="post-toc-text">TrueType (.ttf)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#EOT-–-Embedded-Open-Type-eot"><span class="post-toc-text">EOT – Embedded Open Type (.eot)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OpenType-otf"><span class="post-toc-text">OpenType (.otf)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WOFF-–-Web-Open-Font-Format-woff"><span class="post-toc-text">WOFF – Web Open Font Format (.woff)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SVG-Scalable-Vector-Graphics-Fonts-svg"><span class="post-toc-text">SVG (Scalable Vector Graphics) Fonts (.svg)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字体文件在服务器端开启gzip压缩"><span class="post-toc-text">字体文件在服务器端开启gzip压缩</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-GZIP-压缩"><span class="post-toc-text">什么是 GZIP 压缩</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#浏览器对-font-face-Web-fonts-的支持情况"><span class="post-toc-text">浏览器对 @font-face Web fonts 的支持情况:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ttf-otf-浏览器支持情况"><span class="post-toc-text">ttf/otf 浏览器支持情况</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#woff-浏览器支持情况"><span class="post-toc-text">woff 浏览器支持情况</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#svg-浏览器支持情况"><span class="post-toc-text">svg 浏览器支持情况</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#eot-IE-特有支持"><span class="post-toc-text">eot IE 特有支持</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#步骤一：登录远程服务器"><span class="post-toc-text">步骤一：登录远程服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#步骤二：修改-nginx-配置文件-mime-types-文件"><span class="post-toc-text">步骤二：修改 nginx 配置文件 mime.types 文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#步骤三：修改-nginx-配置文件-nginx-conf-文件"><span class="post-toc-text">步骤三：修改 nginx 配置文件 nginx.conf 文件</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序插件开发小结"><span class="post-toc-text">小程序插件开发小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基础概念"><span class="post-toc-text">基础概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#什么是小程序插件"><span class="post-toc-text">什么是小程序插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插件所有者小程序"><span class="post-toc-text">插件所有者小程序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#什么是插件功能页"><span class="post-toc-text">什么是插件功能页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插件使用组件限制"><span class="post-toc-text">插件使用组件限制</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开发插件"><span class="post-toc-text">开发插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开放范围及服务类目"><span class="post-toc-text">开放范围及服务类目</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插件开发接入流程"><span class="post-toc-text">插件开发接入流程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插件开发"><span class="post-toc-text">插件开发</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小程序插件的使用"><span class="post-toc-text">小程序插件的使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#小程序引用插件接口、页面、组件"><span class="post-toc-text">小程序引用插件接口、页面、组件</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -399,7 +431,7 @@
         
     
             <p class="article-headline-p">
-                对字体文件开启GZIP压缩
+                小程序插件开发小结
             </p>
         </div>
 
@@ -418,7 +450,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Heaven</strong>
-        <span>11月 18, 2015</span>
+        <span>5月 29, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -442,7 +474,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/blog/tags/font/">font</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/blog/tags/性能优化/">性能优化</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/blog/tags/移动端/">移动端</a>
+        <a class="post_tag-link" href="/blog/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/blog/tags/miniprogram/">miniprogram</a>
     </ul>
     
 
@@ -458,7 +490,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=对字体文件开启GZIP压缩&url=http://heavenru.com/blog/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/index.html&pic=http://heavenru.com/blogfavicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=小程序插件开发小结&url=http://heavenru.com/blog/blog/2019/05/29/miniprogram-plugin/index.html&pic=http://heavenru.com/blogfavicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -467,7 +499,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=对字体文件开启GZIP压缩&url=http://heavenru.com/blog/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/index.html&via=Heaven" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=小程序插件开发小结&url=http://heavenru.com/blog/blog/2019/05/29/miniprogram-plugin/index.html&via=Heaven" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -476,7 +508,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://heavenru.com/blog/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://heavenru.com/blog/blog/2019/05/29/miniprogram-plugin/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -485,7 +517,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://heavenru.com/blog/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://heavenru.com/blog/blog/2019/05/29/miniprogram-plugin/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -509,45 +541,187 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h2><h3 id="TrueType-ttf"><a href="#TrueType-ttf" class="headerlink" title="TrueType (.ttf)"></a>TrueType (.ttf)</h3><p>　　<code>Windows</code> 和 <code>Mac</code> 系统最常用的字体格式，其最大的特点就是它是由一种数学模式来进行定义的基于轮廓技术的字体，这使得它们比基于矢量的字体更容易处理，保证了屏幕与打印输出的一致性。同时，这类字体和矢量字体一样可以随意缩放、旋转而不必担心会出现锯齿。<br><a id="more"></a></p>
-<h3 id="EOT-–-Embedded-Open-Type-eot"><a href="#EOT-–-Embedded-Open-Type-eot" class="headerlink" title="EOT – Embedded Open Type (.eot)"></a>EOT – Embedded Open Type (.eot)</h3><p>　　嵌入字体格式 <code>(EOT)</code> 是微软开发的一种技术，允许 <code>OpenType</code> 字体嵌入到网页并可以下载至浏览器渲染，浏览器根据 <code>CSS</code> 中 <code>@font-face</code> 的定义，下载，渲染这种 <code>.EOT</code> 后缀的字体文件。这些文件只在当前页活动的状态下，临时安装在用户的系统中。</p>
-<h3 id="OpenType-otf"><a href="#OpenType-otf" class="headerlink" title="OpenType (.otf)"></a>OpenType (.otf)</h3><p>　　<code>OpenType</code> 是一种可缩放字型 <code>(scalable font)</code> 电脑字体类型，采用 <code>PostScript</code> 格式，是美国微软公司与Adobe公司联合开发，用来替代 <code>TrueType</code> 字型的新字型。这类字体的文件扩展名为 <code>.otf</code>，类型代码是 <code>OTTO</code>，现行标准为 <code>OpenType 1.4</code>。<code>OpenType</code> 最初发表于1996年，并在2000年之后出现大量字体。它源于微软公司的 <code>TrueType Open</code> 字型，<code>TrueType Open</code> 字型又源于 <code>TrueType</code> 字型。<code>OpenType font</code> 包括了Adobe CID-Keyed font技术。Adobe公司已经在2002年末将其字体库全部改用OpenType格式。</p>
-<h3 id="WOFF-–-Web-Open-Font-Format-woff"><a href="#WOFF-–-Web-Open-Font-Format-woff" class="headerlink" title="WOFF – Web Open Font Format (.woff)"></a>WOFF – Web Open Font Format (.woff)</h3><p>　　相对于 TrueType 和 OpenType ，WOFF（Web开发字体格式）是一种专门为了 Web 而设计的字体格式标准，它并不复杂，实际上只是对于 TrueType / OpenType 等字体格式的封装，并针对网络使用加以优化：每个字体文件中含有字体以及针对字体的元数据（Metadata），字体文件被压缩，以便于网络传输，并且不包含任何加密或者 DRM 措施。包括 Adobe、 Lino Type、Monotype 在内的几乎所有主要的字体供应商都加入到支持 WOFF 的行列中来</p>
-<h3 id="SVG-Scalable-Vector-Graphics-Fonts-svg"><a href="#SVG-Scalable-Vector-Graphics-Fonts-svg" class="headerlink" title="SVG (Scalable Vector Graphics) Fonts (.svg)"></a>SVG (Scalable Vector Graphics) Fonts (.svg)</h3><p>　　顾名思义，就是使用 <code>SVG</code> 技术来呈现字体，还有一种 <code>gzip</code> 压缩格式的 <code>SVG</code> 字体 <code>.svgz</code> 。<code>SVG</code> 可缩放矢量图形<code>（Scalable Vector Graphics）</code> 是基于可扩展标记语言 <code>(XML)</code>，用于描述二维矢量图形的一种图形格式。<code>SVG</code> 由W3C制定，是一个开放标准。SVG严格遵从XML语法，并用文本格式的描述性语言来描述图像内容，因此是一种和图像分辨率无关的矢量图形格式。SVG可以使你设计的网页可以更加精彩细致，使用简单的文本命令，SVG可实现色彩线性变化、路径、自定义字体、透明效果、滤镜效果等各式常见的图形图像效果。</p>
-<h2 id="字体文件在服务器端开启gzip压缩"><a href="#字体文件在服务器端开启gzip压缩" class="headerlink" title="字体文件在服务器端开启gzip压缩"></a>字体文件在服务器端开启gzip压缩</h2><h3 id="什么是-GZIP-压缩"><a href="#什么是-GZIP-压缩" class="headerlink" title="什么是 GZIP 压缩"></a>什么是 <code>GZIP</code> 压缩</h3><p>GZIP网页压缩，是一种WEB服务器与浏览器之间共同遵守的协议，也就是说WEB服务器和浏览器都必须支持该技术才能实现GZIP压缩，而当下主流的浏览器都是支持GZIP压缩，包括IE6、IE7、IE8、IE9、FireFox、谷歌浏览器、Opera等，而常见的WEB服务器通常有Apache和IIS两种。</p>
-<p>GZIP最早由Jean-loup Gailly和Mark Adler创建，用于UNIX系统的文件压缩。我们在Linux中经常会用到后缀为.gz的文件，它们就是GZIP格式的。目前，GZIP已经成为Internet上使用非常普遍的一种数据压缩格式，或者说一种文件格式。</p>
-<p>GZIP压缩的比率往往在3倍到10倍。</p>
-<h4 id="浏览器对-font-face-Web-fonts-的支持情况"><a href="#浏览器对-font-face-Web-fonts-的支持情况" class="headerlink" title="浏览器对 @font-face Web fonts 的支持情况:"></a>浏览器对 <code>@font-face</code> Web fonts 的支持情况:</h4><p><img src="/blog/images/font-support.png" width="100%"></p>
-<p><br><br></p>
-<h4 id="ttf-otf-浏览器支持情况"><a href="#ttf-otf-浏览器支持情况" class="headerlink" title="ttf/otf 浏览器支持情况"></a>ttf/otf 浏览器支持情况</h4><p><img src="/blog/images/ttf-font.png" width="100%"></p>
-<p><br><br></p>
-<h4 id="woff-浏览器支持情况"><a href="#woff-浏览器支持情况" class="headerlink" title="woff 浏览器支持情况"></a>woff 浏览器支持情况</h4><p><img src="/blog/images/woff-font.png" width="100%"></p>
-<p><br><br></p>
-<h4 id="svg-浏览器支持情况"><a href="#svg-浏览器支持情况" class="headerlink" title="svg 浏览器支持情况"></a>svg 浏览器支持情况</h4><p><img src="/blog/images/svg-font.png" width="100%"></p>
-<p><br><br></p>
-<h4 id="eot-IE-特有支持"><a href="#eot-IE-特有支持" class="headerlink" title="eot IE 特有支持"></a>eot IE 特有支持</h4><p><img src="/blog/images/eot-font.png" width="100%"></p>
-<p><strong>字体文件对应的 minetype </strong></p>
+        <h2 id="小程序插件开发小结"><a href="#小程序插件开发小结" class="headerlink" title="小程序插件开发小结"></a>小程序插件开发小结</h2><blockquote>
+<p>本文主要是整理了与总结了一些小程序插件开发相关资料，按顺序阅读按文章即可对小程序插件开发有个基本了解了</p>
+</blockquote>
+<h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><h4 id="什么是小程序插件"><a href="#什么是小程序插件" class="headerlink" title="什么是小程序插件"></a>什么是小程序插件</h4><blockquote>
+<p>插件是对一组<code>js 接口</code>、<code>自定义组件</code>或<code>页面</code>的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。</p>
+</blockquote>
+<p> 插件的开发和使用自小程序基础库版本 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html" target="_blank" rel="external">1.9.6</a> 开始支持。（如果插件包含页面，则需要基础库版本 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html" target="_blank" rel="external">2.1.0</a> 。）</p>
+<p><strong><span style="color: red;">小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的</span></strong></p>
+<p>传送门：<a href="https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D" target="_blank" rel="external">小程序插件功能介绍</a></p>
+<a id="more"></a>
+<h4 id="插件所有者小程序"><a href="#插件所有者小程序" class="headerlink" title="插件所有者小程序"></a>插件所有者小程序</h4><p>开始开发之前，我们需要知道，插件功能页是指 <strong>插件所有者小程序</strong> 中的一个特殊页面。</p>
+<p><strong>插件所有者小程序</strong>，指的是与插件 <code>AppID</code> 相同的小程序。例如，“小程序示例”小程序开发了一个“小程序示例插件”，那么无论这个插件被哪个小程序使用，这个插件的 <strong>插件所有者小程序</strong> 都是“小程序示例”。下文中会继续使用 <strong>插件所有者小程序</strong> 这个说法。</p>
+<h4 id="什么是插件功能页"><a href="#什么是插件功能页" class="headerlink" title="什么是插件功能页"></a>什么是插件功能页</h4><blockquote>
+<p>相对于普通 js 文件或自定义组件，插件拥有更强的独立性，拥有独立的 API 接口、域名列表等，但同时会受到一些限制，如 <strong>一些 API 无法调用或功能受限</strong>。还有个别特殊的接口，虽然插件不能直接调用，但可以使用 <strong>插件功能页</strong> 来间接实现。</p>
+</blockquote>
+<p><strong>激活插件功能页特性：</strong></p>
+<p>要在插件中调用插件功能页，需要先激活插件所有者小程序的功能页特性。具体来说，在插件所有者小程序的 <code>app.json</code> 文件中添加 <code>functionalPages</code> 定义段，并令其值为 <code>true</code> ，例如：</p>
+<pre><code class="json">{
+  &quot;functionalPages&quot;: {
+    &quot;independent&quot;: true
+  }
+}
+
+// 兼容旧方式
+{
+  &quot;functionalPages&quot;: true
+}
+</code></pre>
+<p>这两种写法的区别在于，新式的写法 <code>&quot;independent&quot;: true</code> 会使得插件功能页的代码独立于其他代码，这意味着插件功能页可以被独立下载、加载，具有更好的性能表现。 但也同时使得插件功能页目录 <code>functional-pages/</code> （支付功能页会使用其中的文件）不能 require 这个目录以外的文件（反之亦然：这个目录以外的文件也不能调用这个目录内的）。</p>
+<p>注意，新增或改变这个字段时，需要这个小程序发布新版本，才能在正式环境中使用插件功能页。</p>
+<p>传送门：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages.html" target="_blank" rel="external">插件功能页</a></p>
+<p>####插件调用 API 限制</p>
+<p>插件可以调用的 API 与小程序不同，主要有两个区别：</p>
 <ul>
-<li>application/font-woff                 woff</li>
-<li>application/font-sfnt                 ttf</li>
-<li>application/vnd.ms-fontobj        ecteot</li>
-<li>image/svg+xml                                    svg svgz</li>
+<li>插件的请求域名列表与小程序相互独立；</li>
+<li>一些 API 不允许插件调用（这些函数不存在于 <code>wx</code> 对象下）。</li>
 </ul>
-<p>以 <a href="m.meizu.com">m.meizu.com</a> 网站中 <code>KaiGenGothicCN-Light.woff</code> 字体文件为例</p>
-<p>开启前字体文件大小为 <code>311kb</code>，开启后 <code>223kb</code>，相比开启前压缩了 <code>30%</code> 左右，如下图</p>
-<p><img src="/blog/images/font-compare.jpg" width="100%"></p>
-<h3 id="步骤一：登录远程服务器"><a href="#步骤一：登录远程服务器" class="headerlink" title="步骤一：登录远程服务器"></a>步骤一：登录远程服务器</h3><p><code>ssh 用户名@远程ip地址</code> 输入密码</p>
-<h3 id="步骤二：修改-nginx-配置文件-mime-types-文件"><a href="#步骤二：修改-nginx-配置文件-mime-types-文件" class="headerlink" title="步骤二：修改 nginx 配置文件 mime.types 文件"></a>步骤二：修改 nginx 配置文件 mime.types 文件</h3><p>打开配置文件，添加如下几个配置项:</p>
-<pre><code class="nginx">application/font-woff     woff  
-application/font-sfnt     ttf
-application/vnd.ms-fontobject        eot
-image/svg+xml        svg svgz
+<p>有些接口虽然在插件中不能使用，但可以通过插件功能页来达到目的，请参考<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages.html" target="_blank" rel="external">插件功能页</a>。</p>
+<p>目前，允许插件调用的 API 有：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/api-limit.html" target="_blank" rel="external">插件可调用 API 列表</a></p>
+<h4 id="插件使用组件限制"><a href="#插件使用组件限制" class="headerlink" title="插件使用组件限制"></a>插件使用组件限制</h4><p>在插件开发中，以下组件不能在插件页面中使用：</p>
+<ul>
+<li>开放能力（open-type）为以下之一的 button：<ul>
+<li>contact（打开客服会话）</li>
+<li>getPhoneNumber（获取用户手机号）</li>
+<li>getUserInfo（获取用户信息）</li>
+</ul>
+</li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html" target="_blank" rel="external">open-data</a></li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html" target="_blank" rel="external">web-view</a></li>
+</ul>
+<p>以下组件的使用对基础库版本有要求：</p>
+<ul>
+<li><a href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html" target="_blank" rel="external">navigator</a> 需要基础库版本 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html" target="_blank" rel="external">2.1.0</a></li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html" target="_blank" rel="external">live-player</a> 和 <a href="https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html" target="_blank" rel="external">live-pusher</a> 需要基础库版本 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html" target="_blank" rel="external">2.3.0</a></li>
+</ul>
+<h3 id="开发插件"><a href="#开发插件" class="headerlink" title="开发插件"></a>开发插件</h3><h4 id="开放范围及服务类目"><a href="#开放范围及服务类目" class="headerlink" title="开放范围及服务类目"></a>开放范围及服务类目</h4><blockquote>
+<p>开放范围：企业、媒体、政府及其他组织主体</p>
+</blockquote>
+<h4 id="插件开发接入流程"><a href="#插件开发接入流程" class="headerlink" title="插件开发接入流程"></a>插件开发接入流程</h4><p>以下为插件开发接入流程：</p>
+<ol>
+<li><a href="https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%BC%80%E9%80%9A%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD" target="_blank" rel="external">开通插件功能</a></li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%A1%AB%E5%86%99%E5%BC%80%E5%8F%91%E4%BF%A1%E6%81%AF%E5%B9%B6%E5%AE%8C%E6%88%90%E5%BC%80%E5%8F%91" target="_blank" rel="external">填写开发信息并开发</a></li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%AE%8C%E5%96%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" target="_blank" rel="external">完善基本信息</a></li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E6%8F%90%E4%BA%A4%E5%AE%A1%E6%A0%B8%E3%80%81%E5%8F%91%E5%B8%83" target="_blank" rel="external">提交审核、发布</a></li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E7%AE%A1%E7%90%86%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AF%B7" target="_blank" rel="external">管理插件使用申请</a></li>
+</ol>
+<h4 id="插件开发"><a href="#插件开发" class="headerlink" title="插件开发"></a>插件开发</h4><p>传送门：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html" target="_blank" rel="external">小程序插件开发</a></p>
+<p>阅读官方文档之后，我们大概知道如何进行一个小程序插件开发了。这里记录一些文档上没提到的地方：</p>
+<ul>
+<li>插件里面可以引用 <code>npm</code> 包，同样的可以将引用的包暴露给小程序使用</li>
+<li>插件里面支持发布<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/template-message.html" target="_blank" rel="external">模板消息</a>到第三方小程序主体中</li>
+</ul>
+<h3 id="小程序插件的使用"><a href="#小程序插件的使用" class="headerlink" title="小程序插件的使用"></a>小程序插件的使用</h3><blockquote>
+<p>在使用插件前，首先要在小程序管理后台的“设置-第三方服务-插件管理”中添加插件。开发者可登录小程序管理后台，通过 appid 查找插件并添加。如果插件无需申请，添加后可直接使用；否则需要申请并等待插件开发者通过后，方可在小程序中使用相应的插件。</p>
+</blockquote>
+<p>使用插件前，使用者要在 <code>app.json</code> 中声明需要使用的插件，例如：</p>
+<pre><code class="json">{
+  &quot;plugins&quot;: {
+    &quot;myPlugin&quot;: { // &#39;myPlugin&#39; 只是一个别名，可随意命名
+      &quot;version&quot;: &quot;1.0.0&quot;,
+      &quot;provider&quot;: &quot;wxidxxxxxxxxxxxxxxxx&quot;
+    }
+  }
+}
 </code></pre>
-<h3 id="步骤三：修改-nginx-配置文件-nginx-conf-文件"><a href="#步骤三：修改-nginx-配置文件-nginx-conf-文件" class="headerlink" title="步骤三：修改 nginx 配置文件 nginx.conf 文件"></a>步骤三：修改 nginx 配置文件 nginx.conf 文件</h3><p>打开 <code>nginx.conf</code> 文件，添加如下配置项</p>
-<pre><code class="nginx">gzip_types        text/plain application/x-javascript text/css application/xml application/font-woff application/vnd.ms-fontobject application/font-sfnt image/svg+xml
+<p><strong>在分包内引入插件代码包：</strong></p>
+<p>如果插件只在一个分包内用到，可以将插件仅放在这个分包内，例如：</p>
+<pre><code class="json">{
+  &quot;subpackages&quot;: [
+    {
+      &quot;root&quot;: &quot;packageA&quot;,
+      &quot;pages&quot;: [&quot;pages/cat&quot;, &quot;pages/dog&quot;],
+      &quot;plugins&quot;: {
+        &quot;myPlugin&quot;: {
+          &quot;version&quot;: &quot;1.0.0&quot;,
+          &quot;provider&quot;: &quot;wxidxxxxxxxxxxxxxxxx&quot;
+        }
+      }
+    }
+  ]
+}
 </code></pre>
-<p>这里面新增的配置项就是刚刚在 <code>mime.types</code> 里面配置的键</p>
-<p><strong>修改了配置文件，需要重启nginx</strong><br><strong>重启 nginx：/data/nginx/sbin/nginx -s reload</strong></p>
+<p>在分包内使用插件有如下限制：</p>
+<ul>
+<li>仅能在这个分包内使用该插件；</li>
+<li>同一个插件不能被多个分包同时引用；</li>
+<li>基础库版本低于 2.6.0 时，不能从分包外的页面直接跳入分包内的插件页面，需要先跳入分包内的非插件页面、再跳入同一分包内的插件页面。</li>
+</ul>
+<h4 id="小程序引用插件接口、页面、组件"><a href="#小程序引用插件接口、页面、组件" class="headerlink" title="小程序引用插件接口、页面、组件"></a>小程序引用插件接口、页面、组件</h4><ul>
+<li><p>引用插件提供的组件：</p>
+<p>使用插件提供的自定义组件，和<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/" target="_blank" rel="external">使用普通自定义组件</a>的方式相仿。在页面的 <code>json</code> 文件定义需要引入的自定义组件时，使用 <code>plugin://</code> 协议指明插件的引用名和自定义组件名，</p>
+</li>
+</ul>
+<pre><code class="json">{
+  &quot;usingComponents&quot;: {
+    &quot;hello-component&quot;: &quot;plugin://myPlugin/hello-component&quot;
+  }
+}
+</code></pre>
+<ul>
+<li><p>引用插件提供的接口</p>
+<p>使用插件的 js 接口时，可以使用 <code>requirePlugin</code> 方法。例如，插件提供一个名为 <code>hello</code> 的方法和一个名为 <code>world</code> 的变量，则可以像下面这样调用：</p>
+</li>
+</ul>
+<pre><code class="json">const myPluginInterface = requirePlugin(&#39;myPlugin&#39;)
+
+myPluginInterface.hello()
+const myWorld = myPluginInterface.world
+</code></pre>
+<ul>
+<li><p>引用插件页面</p>
+<p>插件的页面从小程序基础库版本 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html" target="_blank" rel="external">2.1.0</a> 开始支持。</p>
+<p>需要跳转到插件页面时，<code>url</code> 使用 <code>plugin://</code> 前缀，形如 <code>plugin://PLUGIN_NAME/PLUGIN_PAGE</code>， 如：</p>
+</li>
+</ul>
+<pre><code class="html">&lt;navigator url=&quot;plugin://myPlugin/hello-page&quot;&gt;
+  Go to pages/hello-page!
+&lt;/navigator&gt;
+</code></pre>
+<p>####小程序与插件数据交互</p>
+<ul>
+<li>通过 URL 参数形式传递</li>
+</ul>
+<ol>
+<li>在小程序端引用插件入口，<code>URL</code> 后面带上插件所需的数据信息，通过这种方案，我们可以将小程序的里面 取得的 <code>openId</code> 传递给插件</li>
+</ol>
+<pre><code class="html">&lt;navigator class=&#39;item&#39; url=&#39;plugin://myPlugin/send-message?params={{params}}&#39;&gt;
+  表单提交推送消息
+&lt;/navigator&gt;
+</code></pre>
+<ol>
+<li>在插件页面 <code>onLoad</code> 生命周期内，获取并解析数据</li>
+</ol>
+<pre><code class="js">// 生命周期函数--监听页面加载
+onLoad(options) {
+  console.log(&#39;onLoad&#39;, options)
+  const params = options ? options.params : &#39;{}&#39;
+  const pageParams = JSON.parse(params)
+  console.log(pageParams)
+  this.setData({ pageParams })
+},
+</code></pre>
+<ul>
+<li>通过小程序提供一个消息订阅接口</li>
+</ul>
+<pre><code class="js">const plugin = requirePlugin(&quot;myPlugin&quot;)
+
+// 这里的 msg 假设是一个消息订阅类
+// 消息通信 - 小程序端
+// 监听来自插件的消息
+plugin.msg.on(&#39;plugin&#39;, data =&gt; console.log(data))
+// 发送小程序消息给插件
+plugin.msg.emit(&#39;mini&#39;, { id: 333 })
+
+// 消息通信 - 插件端
+import msg from &#39;../../common/msg&#39;
+// 监听来自小程序的消息
+msg.on(&#39;mini&#39;, data =&gt; console.log(data))
+// 发送插件消息给小程序
+msg.emit(&#39;plugin&#39;, { id: 333 })
+</code></pre>
 
         
     
@@ -566,8 +740,8 @@ image/svg+xml        svg svgz
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://heavenru.com/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://heavenru.com/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://heavenru.com/blog/2019/05/29/miniprogram-plugin/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://heavenru.com/blog/2019/05/29/miniprogram-plugin/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -597,21 +771,13 @@ image/svg+xml        svg svgz
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/blog/2015/11/19/Threejs学习笔记/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/blog/2015/11/18/移动端优化/" id="post_nav-older" class="next-content">
+        <a href="/blog/2019/05/18/react-hook/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
