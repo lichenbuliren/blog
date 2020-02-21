@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://heavenru.com/blog/"/>
-  <updated>2019-05-29T02:25:19.491Z</updated>
+  <updated>2020-02-21T12:07:08.948Z</updated>
   <id>http://heavenru.com/blog/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用 TypeScript 开发小程序最佳实践</title>
+    <link href="http://heavenru.com/blog/2020/01/28/%E7%94%A8-Typescript-%E7%BC%96%E5%86%99%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://heavenru.com/blog/2020/01/28/用-Typescript-编写微信小程序/</id>
+    <published>2020-01-28T07:34:33.000Z</published>
+    <updated>2020-02-21T12:07:08.948Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;当微信小程序遇上 Typescript 会碰撞出怎样的火花？该文章将介绍一下如何使用 TS 来提升小程序的开发体验&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;该文章含有大量示例代码，读者有过小程序开发经验并且对
+        
+      
+    
+    </summary>
+    
+      <category term="小程序" scheme="http://heavenru.com/blog/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="typescript" scheme="http://heavenru.com/blog/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/typescript/"/>
+    
+    
+      <category term="小程序" scheme="http://heavenru.com/blog/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="typescript" scheme="http://heavenru.com/blog/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>小程序插件开发小结</title>
     <link href="http://heavenru.com/blog/2019/05/29/miniprogram-plugin/"/>
     <id>http://heavenru.com/blog/2019/05/29/miniprogram-plugin/</id>
     <published>2019-05-29T02:14:05.000Z</published>
-    <updated>2019-05-29T02:25:19.491Z</updated>
+    <updated>2020-01-28T06:37:14.830Z</updated>
     
     <summary type="html">
     
@@ -31,9 +64,9 @@
 &lt;h3 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; class=&quot;headerlink&quot; title=&quot;基础概念&quot;&gt;&lt;/a&gt;基础概念&lt;/h3&gt;&lt;h4 id=&quot;什么是小程序插件&quot;&gt;&lt;a href=&quot;#什么是小程序插件&quot; class=&quot;headerlink&quot; title=&quot;什么是小程序插件&quot;&gt;&lt;/a&gt;什么是小程序插件&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;插件是对一组&lt;code&gt;js 接口&lt;/code&gt;、&lt;code&gt;自定义组件&lt;/code&gt;或&lt;code&gt;页面&lt;/code&gt;的封装，用于嵌入到小程序中使用。插件不能独立运行，必须嵌入在其他小程序中才能被用户使用；而第三方小程序在使用插件时，也无法看到插件的代码。因此，插件适合用来封装自己的功能或服务，提供给第三方小程序进行展示和使用。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt; 插件的开发和使用自小程序基础库版本 &lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1.9.6&lt;/a&gt; 开始支持。（如果插件包含页面，则需要基础库版本 &lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;2.1.0&lt;/a&gt; 。）&lt;/p&gt;
+&lt;p&gt; 插件的开发和使用自小程序基础库版本 &lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;1.9.6&lt;/a&gt; 开始支持。（如果插件包含页面，则需要基础库版本 &lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;2.1.0&lt;/a&gt; 。）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: red;&quot;&gt;小程序的 AppID 可以创建小程序插件项目，插件是独立于小程序之外的，但是 AppID 是公用的&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;传送门：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小程序插件功能介绍&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;传送门：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;小程序插件功能介绍&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -51,12 +84,12 @@
     <link href="http://heavenru.com/blog/2019/05/18/react-hook/"/>
     <id>http://heavenru.com/blog/2019/05/18/react-hook/</id>
     <published>2019-05-18T08:31:27.000Z</published>
-    <updated>2019-05-29T02:25:27.084Z</updated>
+    <updated>2020-01-28T06:37:14.830Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;React-Hook-不完全指南&quot;&gt;&lt;a href=&quot;#React-Hook-不完全指南&quot; class=&quot;headerlink&quot; title=&quot;React Hook 不完全指南&quot;&gt;&lt;/a&gt;React Hook 不完全指南&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;本文内容大部分参考了 &lt;a href=&quot;https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;overreacted.io&lt;/a&gt; 博客一文，同时结合 &lt;a href=&quot;https://zh-hans.reactjs.org/docs/hooks-intro.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;React Hook 官方&lt;/a&gt; 文章，整理并归纳一些笔记和输出个人的一些理解&lt;/p&gt;
+&lt;p&gt;本文内容大部分参考了 &lt;a href=&quot;https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;overreacted.io&lt;/a&gt; 博客一文，同时结合 &lt;a href=&quot;https://zh-hans.reactjs.org/docs/hooks-intro.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;React Hook 官方&lt;/a&gt; 文章，整理并归纳一些笔记和输出个人的一些理解&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -75,7 +108,7 @@
     <link href="http://heavenru.com/blog/2017/09/22/CSS-GPU-Animation-Doing-It-Right/"/>
     <id>http://heavenru.com/blog/2017/09/22/CSS-GPU-Animation-Doing-It-Right/</id>
     <published>2017-09-22T03:36:43.000Z</published>
-    <updated>2019-05-29T02:31:12.976Z</updated>
+    <updated>2020-01-28T06:37:14.827Z</updated>
     
     <summary type="html">
     
@@ -91,7 +124,7 @@
     <link href="http://heavenru.com/blog/2017/09/21/vue2-0-%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     <id>http://heavenru.com/blog/2017/09/21/vue2-0-项目总结/</id>
     <published>2017-09-21T03:37:37.000Z</published>
-    <updated>2019-05-29T02:31:59.718Z</updated>
+    <updated>2020-01-28T06:37:14.830Z</updated>
     
     <summary type="html">
     
@@ -113,7 +146,7 @@
     <link href="http://heavenru.com/blog/2017/07/31/%E4%BD%BF%E7%94%A8CANVAS%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%8A%A8%E7%94%BB/"/>
     <id>http://heavenru.com/blog/2017/07/31/使用CANVAS实现视频动画/</id>
     <published>2017-07-31T11:38:52.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.831Z</updated>
     
     <summary type="html">
     
@@ -135,7 +168,7 @@
     <link href="http://heavenru.com/blog/2016/11/24/%E8%87%AA%E5%AE%9A%E4%B9%89angular2%E8%BE%93%E5%85%A5%E7%BB%84%E4%BB%B6/"/>
     <id>http://heavenru.com/blog/2016/11/24/自定义angular2输入组件/</id>
     <published>2016-11-24T11:17:44.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.833Z</updated>
     
     <summary type="html">
     
@@ -157,7 +190,7 @@
     <link href="http://heavenru.com/blog/2016/07/03/%E4%BD%BF%E7%94%A8Vue-js%E6%9E%84%E5%BB%BA%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8/"/>
     <id>http://heavenru.com/blog/2016/07/03/使用Vue-js构建单页应用/</id>
     <published>2016-07-03T12:56:24.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.831Z</updated>
     
     <summary type="html">
     
@@ -179,7 +212,7 @@
     <link href="http://heavenru.com/blog/2016/05/17/%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E4%B8%8A%E4%BC%A0-%E4%B8%8B%E7%AF%87/"/>
     <id>http://heavenru.com/blog/2016/05/17/文件异步上传-下篇/</id>
     <published>2016-05-17T06:43:07.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.833Z</updated>
     
     <summary type="html">
     
@@ -209,13 +242,13 @@
     <link href="http://heavenru.com/blog/2016/05/12/%E6%96%87%E4%BB%B6%E5%BC%82%E6%AD%A5%E4%B8%8A%E4%BC%A0-%E4%B8%8A%E7%AF%87/"/>
     <id>http://heavenru.com/blog/2016/05/12/文件异步上传-上篇/</id>
     <published>2016-05-12T08:43:36.000Z</published>
-    <updated>2017-08-01T11:29:52.000Z</updated>
+    <updated>2020-01-28T06:37:14.833Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;项目背景&quot;&gt;&lt;a href=&quot;#项目背景&quot; class=&quot;headerlink&quot; title=&quot;项目背景&quot;&gt;&lt;/a&gt;项目背景&lt;/h3&gt;&lt;p&gt;在这篇文章的里面和大家分享下 HTML5 的文件上传操作，后台是我用 &lt;code&gt;nodejs&lt;/code&gt; 的&lt;code&gt;koa&lt;/code&gt;框架搭建的一个Demo，所在在这篇文章里面，我也会顺带讲讲如何用&lt;code&gt;koa&lt;/code&gt;搭建一个简单的node后台。&lt;/p&gt;
 &lt;h3 id=&quot;技术要点&quot;&gt;&lt;a href=&quot;#技术要点&quot; class=&quot;headerlink&quot; title=&quot;技术要点&quot;&gt;&lt;/a&gt;技术要点&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FileReader&lt;/a&gt; 用来实现图片预览、&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/API/FormData&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FormData&lt;/a&gt; 用来实现文件异步上传操作&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;FileReader&lt;/a&gt; 用来实现图片预览、&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/API/FormData&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;FormData&lt;/a&gt; 用来实现文件异步上传操作&lt;/li&gt;
 &lt;li&gt;koa 框架的简单使用&lt;/li&gt;
 &lt;li&gt;利用 FormData 实现文件异步上传操作&lt;/li&gt;
 &lt;/ol&gt;
@@ -244,7 +277,7 @@
     <link href="http://heavenru.com/blog/2015/12/04/React-%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5%E5%B0%8F%E7%BB%93/"/>
     <id>http://heavenru.com/blog/2015/12/04/React-入门实践小结/</id>
     <published>2015-12-04T11:59:16.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.829Z</updated>
     
     <summary type="html">
     
@@ -266,13 +299,13 @@
     <link href="http://heavenru.com/blog/2015/12/01/Shadowsocks-%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE/"/>
     <id>http://heavenru.com/blog/2015/12/01/Shadowsocks-本地配置/</id>
     <published>2015-12-01T11:37:34.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.829Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;接上一篇「挣脱牢笼之搭建 VPN」，我们已经购买了虚拟服务器，并且在上面开启了 「Shadowsocks」服务。&lt;/p&gt;
 &lt;h3 id=&quot;本地「Shadowsocks」配置&quot;&gt;&lt;a href=&quot;#本地「Shadowsocks」配置&quot; class=&quot;headerlink&quot; title=&quot;本地「Shadowsocks」配置&quot;&gt;&lt;/a&gt;本地「Shadowsocks」配置&lt;/h3&gt;&lt;p&gt;打开我们已经安装的 「Shadowsocks」软件，点击小飞机图标，选择 &lt;code&gt;Servers-&amp;gt;Open Server Preferences&lt;/code&gt;，出现如下界面；&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/blog/images/preferences.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/preferences.png&quot; alt&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Address: 我们的虚拟服务器（VPS）地址 + 端口&lt;/li&gt;
 &lt;li&gt;Encryption: 服务器中开启的加密方式&lt;/li&gt;
@@ -296,7 +329,7 @@
     <link href="http://heavenru.com/blog/2015/11/27/%E6%8C%A3%E8%84%B1%E7%89%A2%E7%AC%BC%E4%B9%8B%E6%90%AD%E5%BB%BA%E8%BF%9C%E7%A8%8B%20VPN/"/>
     <id>http://heavenru.com/blog/2015/11/27/挣脱牢笼之搭建远程 VPN/</id>
     <published>2015-11-27T11:54:17.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.832Z</updated>
     
     <summary type="html">
     
@@ -319,12 +352,12 @@
     <link href="http://heavenru.com/blog/2015/11/25/CreateJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/"/>
     <id>http://heavenru.com/blog/2015/11/25/CreateJS学习笔记01/</id>
     <published>2015-11-25T11:33:37.000Z</published>
-    <updated>2017-08-01T11:29:52.000Z</updated>
+    <updated>2020-01-28T07:42:53.530Z</updated>
     
     <summary type="html">
     
       &lt;h2 id=&quot;1、什么是-CreateJS&quot;&gt;&lt;a href=&quot;#1、什么是-CreateJS&quot; class=&quot;headerlink&quot; title=&quot;1、什么是 CreateJS ?&quot;&gt;&lt;/a&gt;1、什么是 CreateJS ?&lt;/h2&gt;&lt;p&gt;CreateJS 是一套可以构建丰富交互体验的 HTML5 游戏的开源工具包，旨在降低 HTML5 项目的开发难度和成本，让开发者以熟悉的方式打造更具现代感的网络交互体验。&lt;/p&gt;
-&lt;p&gt;官方地址：&lt;a href=&quot;www.createjs.com&quot;&gt;www.createjs.com&lt;/a&gt;;&lt;br&gt;Github: &lt;a href=&quot;https://github.com/CreateJS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/CreateJS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;官方地址：&lt;a href=&quot;www.createjs.com&quot;&gt;www.createjs.com&lt;/a&gt;;&lt;br&gt;Github: &lt;a href=&quot;https://github.com/CreateJS&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/CreateJS&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -344,7 +377,7 @@
     <link href="http://heavenru.com/blog/2015/11/19/Threejs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://heavenru.com/blog/2015/11/19/Threejs学习笔记/</id>
     <published>2015-11-19T09:26:26.000Z</published>
-    <updated>2017-08-01T11:29:52.000Z</updated>
+    <updated>2020-01-28T06:37:14.829Z</updated>
     
     <summary type="html">
     
@@ -372,7 +405,7 @@
     <link href="http://heavenru.com/blog/2015/11/18/web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%BC%80%E5%90%AF%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6gzip%E5%8E%8B%E7%BC%A9/"/>
     <id>http://heavenru.com/blog/2015/11/18/web性能优化-开启字体文件gzip压缩/</id>
     <published>2015-11-18T03:21:35.000Z</published>
-    <updated>2017-09-21T14:23:23.000Z</updated>
+    <updated>2020-01-28T06:37:14.831Z</updated>
     
     <summary type="html">
     
@@ -396,7 +429,7 @@
     <link href="http://heavenru.com/blog/2015/11/18/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%BC%98%E5%8C%96/"/>
     <id>http://heavenru.com/blog/2015/11/18/移动端优化/</id>
     <published>2015-11-18T03:21:35.000Z</published>
-    <updated>2017-08-01T11:29:52.000Z</updated>
+    <updated>2020-01-28T06:37:14.833Z</updated>
     
     <summary type="html">
     
@@ -429,7 +462,7 @@
         transform: translate3d(-50%,-50%,0);
     }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;另一种居中方案：&lt;a href=&quot;http://jsbin.com/medeserawe/edit?html,output&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jsbin.com/medeserawe/edit?html,output&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;另一种居中方案：&lt;a href=&quot;http://jsbin.com/medeserawe/edit?html,output&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://jsbin.com/medeserawe/edit?html,output&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -449,11 +482,11 @@
     <link href="http://heavenru.com/blog/2015/09/15/%E5%8E%9F%E7%94%9FJS-Tab%E7%BB%84%E4%BB%B6/"/>
     <id>http://heavenru.com/blog/2015/09/15/原生JS-Tab组件/</id>
     <published>2015-09-15T11:31:51.000Z</published>
-    <updated>2017-08-01T11:29:52.000Z</updated>
+    <updated>2020-01-28T06:37:14.832Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;最近在&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;上面看到一个有意思的项目，名字叫做&lt;a href=&quot;https://github.com/nimojs/learn-js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;learnjs&lt;/a&gt;，这里会提供一些基础的JS任务，由浅入深的完成一个个项目不同阶段，从而提高个人的编码水平。&lt;/p&gt;
+      &lt;p&gt;最近在&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github&lt;/a&gt;上面看到一个有意思的项目，名字叫做&lt;a href=&quot;https://github.com/nimojs/learn-js&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;learnjs&lt;/a&gt;，这里会提供一些基础的JS任务，由浅入深的完成一个个项目不同阶段，从而提高个人的编码水平。&lt;/p&gt;
 &lt;p&gt;好了，回到正题，在这里分享下个人编写的Tab组件这个项目的代码，由于没有使用第三方JS库&lt;br&gt;所以下面的代码中没有去考虑低版本浏览器的兼容性问题。&lt;/p&gt;
     
     </summary>
@@ -470,11 +503,43 @@
   </entry>
   
   <entry>
+    <title>使用Hexo搭建GitHub个人博客</title>
+    <link href="http://heavenru.com/blog/2015/09/02/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BAGitHub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://heavenru.com/blog/2015/09/02/使用Hexo搭建GitHub个人博客/</id>
+    <published>2015-09-02T10:31:25.000Z</published>
+    <updated>2020-01-28T06:37:14.831Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近突然想起来要捣鼓一个自己的个人博客网站，在网上查了下各种资料，最后决定使用Hexo来搭建了。在捣鼓的过程中也发现有很多坑，在这里总结下个人的搭建经历。&lt;/p&gt;
+&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#intro&quot;&gt;Hexo简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#install&quot;&gt;Hexo安装方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#config&quot;&gt;Hexo配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#write&quot;&gt;写文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#deploy&quot;&gt;Hexo部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#plugins&quot;&gt;Hexo常用插件&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;1-Hexo简介&quot;&gt;&lt;a href=&quot;#1-Hexo简介&quot; class=&quot;headerlink&quot; title=&quot;1. Hexo简介&quot;&gt;&lt;/a&gt;&lt;a name=&quot;intro&quot;&gt;1. Hexo简介&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Hexo 是一个轻量的静态博客框架。通过Hexo可以快速生成一个静态博客框架,仅需要几条命令就可以完成,相当方便。&lt;/p&gt;
+&lt;p&gt;而架设Hexo的环境更简单了 不需要lnmp/lamp这些繁琐复杂的环境 仅仅需要一个简单的http服务器即可使用 或者使用互联网上免费的页面托管服务&lt;br&gt;比如Hexo的官方网站&lt;a href=&quot;http://hexo.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://hexo.io&lt;/a&gt; 就是托管于github的pages服务上&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="http://heavenru.com/blog/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
+    
+      <category term="demo" scheme="http://heavenru.com/blog/tags/demo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>放弃jQuery,使用原生JS API</title>
     <link href="http://heavenru.com/blog/2015/09/02/%E6%94%BE%E5%BC%83jQuery,%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9FJS%20API/"/>
     <id>http://heavenru.com/blog/2015/09/02/放弃jQuery,使用原生JS API/</id>
     <published>2015-09-02T10:31:25.000Z</published>
-    <updated>2017-08-01T11:29:52.000Z</updated>
+    <updated>2020-01-28T06:37:14.832Z</updated>
     
     <summary type="html">
     
@@ -494,38 +559,6 @@
       <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
     
       <category term="js" scheme="http://heavenru.com/blog/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Hexo搭建GitHub个人博客</title>
-    <link href="http://heavenru.com/blog/2015/09/02/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BAGitHub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://heavenru.com/blog/2015/09/02/使用Hexo搭建GitHub个人博客/</id>
-    <published>2015-09-02T10:31:25.000Z</published>
-    <updated>2017-08-01T11:29:52.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近突然想起来要捣鼓一个自己的个人博客网站，在网上查了下各种资料，最后决定使用Hexo来搭建了。在捣鼓的过程中也发现有很多坑，在这里总结下个人的搭建经历。&lt;/p&gt;
-&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;#intro&quot;&gt;Hexo简介&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#install&quot;&gt;Hexo安装方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#config&quot;&gt;Hexo配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#write&quot;&gt;写文章&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#deploy&quot;&gt;Hexo部署&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#plugins&quot;&gt;Hexo常用插件&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;1-Hexo简介&quot;&gt;&lt;a href=&quot;#1-Hexo简介&quot; class=&quot;headerlink&quot; title=&quot;1. Hexo简介&quot;&gt;&lt;/a&gt;&lt;a name=&quot;intro&quot;&gt;1. Hexo简介&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Hexo 是一个轻量的静态博客框架。通过Hexo可以快速生成一个静态博客框架,仅需要几条命令就可以完成,相当方便。&lt;/p&gt;
-&lt;p&gt;而架设Hexo的环境更简单了 不需要lnmp/lamp这些繁琐复杂的环境 仅仅需要一个简单的http服务器即可使用 或者使用互联网上免费的页面托管服务&lt;br&gt;比如Hexo的官方网站&lt;a href=&quot;http://hexo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://hexo.io&lt;/a&gt; 就是托管于github的pages服务上&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://heavenru.com/blog/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
-    
-      <category term="demo" scheme="http://heavenru.com/blog/tags/demo/"/>
     
   </entry>
   

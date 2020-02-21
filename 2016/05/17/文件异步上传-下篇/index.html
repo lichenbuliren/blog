@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
-    <head>
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -45,7 +45,7 @@
     <!-- Meta & Info -->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Heaven">
     <meta name="description" itemprop="description" content="写在前面上一篇主要讲了文件异步上传的前端相关的东西，在这篇文章里面，我们主要讲解写使用koa框架来搭建一个简单的处理文件上传的node后台项目。">
@@ -84,7 +84,7 @@
     <!-- RSS -->
     
         
-            <link rel=alternate type="application/atom+xml" href="/atom.xml">
+            <link rel="alternate" type="application/atom+xml" href="/atom.xml">
         
     
 
@@ -104,7 +104,7 @@
         
             
                 <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/blog/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/blog/css/prettify/tomorrow-night-eighties.min.css?2LJQzURO+Kr8r/fl/T8oMA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/blog/css/prettify/tomorrow-night.min.css?QlnGZk/a4+d8XbwtXBDPiA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -250,25 +250,25 @@
     <meta property="og:url" content="http://heavenru.com/blog">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="文件异步上传-下篇 | Heaven 的博客">
-    <meta property="og:image" content="http://heavenru.com/blogfavicon.png" />
+    <meta property="og:image" content="http://heavenru.com/blogfavicon.png">
     <meta property="og:description" content="写在前面上一篇主要讲了文件异步上传的前端相关的东西，在这篇文章里面，我们主要讲解写使用koa框架来搭建一个简单的处理文件上传的node后台项目。">
     <meta property="og:article:tag" content="HTML5"> <meta property="og:article:tag" content="File Upload"> <meta property="og:article:tag" content="ajax"> <meta property="og:article:tag" content="nodejs"> <meta property="og:article:tag" content="koa"> 
 
     
-        <meta property="article:published_time" content="Tue May 17 2016 14:43:07 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Sep 21 2017 22:23:23 GMT+0800" />
+        <meta property="article:published_time" content="Tue May 17 2016 14:43:07 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jan 28 2020 14:37:14 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="文件异步上传-下篇 | Heaven 的博客">
     <meta name="twitter:description" content="写在前面上一篇主要讲了文件异步上传的前端相关的东西，在这篇文章里面，我们主要讲解写使用koa框架来搭建一个简单的处理文件上传的node后台项目。">
     <meta name="twitter:image" content="http://heavenru.com/blogfavicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://heavenru.com/blog" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://heavenru.com/blog">
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://heavenru.com/blog/blog/2016/05/17/文件异步上传-下篇/index.html" />
+        <link rel="canonical" href="http://heavenru.com/blog/blog/2016/05/17/文件异步上传-下篇/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -283,7 +283,7 @@
     "mainEntityOfPage": "http://heavenru.com/blog/blog/2016/05/17/文件异步上传-下篇/index.html",
     "headline": "文件异步上传-下篇",
     "datePublished": "Tue May 17 2016 14:43:07 GMT+0800",
-    "dateModified": "Thu Sep 21 2017 22:23:23 GMT+0800",
+    "dateModified": "Tue Jan 28 2020 14:37:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Heaven",
@@ -367,7 +367,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写在前面"><span class="post-toc-text">写在前面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主要功能模块"><span class="post-toc-text">主要功能模块</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主要代码"><span class="post-toc-text">主要代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#app-js"><span class="post-toc-text">app.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主要逻辑代码：routers-index-js"><span class="post-toc-text">主要逻辑代码：routers/index.js</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Q-amp-A"><span class="post-toc-text">Q&A</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写在前面"><span class="post-toc-number">1.</span> <span class="post-toc-text">写在前面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主要功能模块"><span class="post-toc-number">2.</span> <span class="post-toc-text">主要功能模块</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主要代码"><span class="post-toc-number">3.</span> <span class="post-toc-text">主要代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#app-js"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">app.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主要逻辑代码：routers-index-js"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">主要逻辑代码：routers/index.js</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Q-amp-A"><span class="post-toc-number">4.</span> <span class="post-toc-text">Q&amp;A</span></a></li></ol>
     </ul>
     
 
@@ -512,9 +512,9 @@
         <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>上一篇主要讲了文件异步上传的前端相关的东西，在这篇文章里面，我们主要讲解写使用<code>koa</code>框架来搭建一个简单的处理文件上传的<code>node</code>后台项目。<br><a id="more"></a></p>
 <p>在这里我不会仔细的讲解每个模块中间件的具体使用方法，文章中提到的模块我都会给出链接，有需要的可以自己去看官方的API学习。</p>
 <h3 id="主要功能模块"><a href="#主要功能模块" class="headerlink" title="主要功能模块"></a>主要功能模块</h3><ul>
-<li><a href="https://github.com/alexmingoia/koa-router" target="_blank" rel="external">koa-router</a> 抽取路由到单独的模块</li>
-<li><a href="https://github.com/koajs/static" target="_blank" rel="external">koa-static</a> 静态文件服务中间件模块</li>
-<li><a href="https://github.com/cojs/busboy" target="_blank" rel="external">koa-busboy</a> 文件域处理模块</li>
+<li><a href="https://github.com/alexmingoia/koa-router" target="_blank" rel="noopener">koa-router</a> 抽取路由到单独的模块</li>
+<li><a href="https://github.com/koajs/static" target="_blank" rel="noopener">koa-static</a> 静态文件服务中间件模块</li>
+<li><a href="https://github.com/cojs/busboy" target="_blank" rel="noopener">koa-busboy</a> 文件域处理模块</li>
 </ul>
 <h3 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h3><h4 id="app-js"><a href="#app-js" class="headerlink" title="app.js"></a>app.js</h4><pre><code class="javascript">var koa = require(&#39;koa&#39;);
 var path = require(&#39;path&#39;);
@@ -774,7 +774,7 @@ module.exports = function(app){
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/blog/archives/2019/05/">五月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2017/09/">九月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2015/11/">十一月 2015<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2015/09/">九月 2015<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/blog/archives/2020/01/">一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2019/05/">五月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2017/09/">九月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2015/11/">十一月 2015<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2015/09/">九月 2015<span class="sidebar_archives-count">3</span></a>
             </ul>
         </li>
         
@@ -792,7 +792,7 @@ module.exports = function(app){
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/blog/categories/CreateJS/">CreateJS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/Vue-js/">Vue.js<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/angular2-js/">angular2.js<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/nodejs/">nodejs<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/React/">React<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/ThreeJS/">ThreeJS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/font/">font<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/wechat/">wechat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/技术类/">技术类<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/教程/">教程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/服务器/">服务器<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/blog/categories/CreateJS/">CreateJS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/Vue-js/">Vue.js<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/angular2-js/">angular2.js<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/JavaScript/nodejs/">nodejs<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/React/">React<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/ThreeJS/">ThreeJS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/font/">font<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/wechat/">wechat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/小程序/">小程序<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/小程序/typescript/">typescript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/技术类/">技术类<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/教程/">教程<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/服务器/">服务器<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -993,6 +993,10 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+    
+        <script>lsloader.load("sm_js","/blog/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
 
 
 
@@ -1024,10 +1028,6 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
 
-    
-        <script>lsloader.load("hanabi","/blog/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
-    
-
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1045,10 +1045,6 @@ It will not impact the appearance and can give developers a lot of support :)
                 })
         
     
-    
-        
-        
-        HanabiBrowser.start('pre code',false);
     
 </script>
 
