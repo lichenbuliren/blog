@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://heavenru.com/blog/"/>
-  <updated>2020-02-22T07:31:57.132Z</updated>
+  <updated>2020-06-11T16:28:31.625Z</updated>
   <id>http://heavenru.com/blog/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高性能多级多选组件开发</title>
+    <link href="http://heavenru.com/blog/2020/05/31/%E9%AB%98%E6%80%A7%E8%83%BD%E5%A4%9A%E7%BA%A7%E5%A4%9A%E9%80%89%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    <id>http://heavenru.com/blog/2020/05/31/高性能多级多选组件开发/</id>
+    <published>2020-05-31T12:13:09.000Z</published>
+    <updated>2020-06-11T16:28:31.625Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;最近在项目开发过程中，有个一个多级多选的公共组件开发需求，特在这里记录下开发过程中所做的一些优化以及分享一下我是如何从零开发并设计一个组件的思路，希望给阅读这篇文章的读者带来一点收获。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Typescript" scheme="http://heavenru.com/blog/tags/Typescript/"/>
+    
+      <category term="React" scheme="http://heavenru.com/blog/tags/React/"/>
+    
+      <category term="性能" scheme="http://heavenru.com/blog/tags/%E6%80%A7%E8%83%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 TypeScript 开发小程序最佳实践</title>
@@ -531,34 +562,6 @@
       <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
     
       <category term="demo" scheme="http://heavenru.com/blog/tags/demo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>放弃jQuery,使用原生JS API</title>
-    <link href="http://heavenru.com/blog/2015/09/02/%E6%94%BE%E5%BC%83jQuery,%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9FJS%20API/"/>
-    <id>http://heavenru.com/blog/2015/09/02/放弃jQuery,使用原生JS API/</id>
-    <published>2015-09-02T10:31:25.000Z</published>
-    <updated>2020-01-28T06:37:14.832Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1、监听文档加载事件&quot;&gt;&lt;a href=&quot;#1、监听文档加载事件&quot; class=&quot;headerlink&quot; title=&quot;1、监听文档加载事件&quot;&gt;&lt;/a&gt;1、监听文档加载事件&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;   
-        
-      
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://heavenru.com/blog/categories/JavaScript/"/>
-    
-    
-      <category term="study" scheme="http://heavenru.com/blog/tags/study/"/>
-    
-      <category term="js" scheme="http://heavenru.com/blog/tags/js/"/>
     
   </entry>
   
